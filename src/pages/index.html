@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-[#171A20]"
+id="landingHeader"
+>
+    <div class="flex flex-grow basis-0">
+        <a href="#herosection" class="bg-black/5 backdrop-blur-lg rounded p-2 px-2"><svg class="h-6 w-28 " 
+            viewBox="0 0 342 35"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"></path></svg></a>
+</div>
+<nav>
+<ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2  [&>li>a]:font-medium [&>li>a]:bordered-text bg-black/5 backdrop-blur-lg rounded">
+    <li><a href="#modely">Model Y</a></li>
+    <li><a href="#model3">Model 3</a></li>
+    <li><a href="#models">Model S</a></li>
+    <li><a href="#modelx">Model X</a></li>
+    <li><a href="#powerwall">Powerwall</a></li>
+    <li><a href="#carga">Carga</a></li>
+</ul>
+</nav>
+
+<nav class="flex flex-grow justify-end basis-0">
+<ul class="flex text-sm [&>li>a]:font-medium [&>li>a]:bg-black/5 [&>li>a]:backdrop-blur-lg [&>li>a]:rounded [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:bordered-text">
+    <li><a href="#">Soporte</a></li>
+    <li><div class="boton-carrito flex text-sm text-current font-medium px-4 py-2 cursor-pointer bg-black/5 backdrop-blur-lg rounded"><a>Carrito</a></div></li>
+        <div id="slideover-container" class="w-full h-full fixed inset-0 invisible flex items-center justify-center z-50">
+    <div id="slideover-bg" class="w-full h-full duration-500 ease-out transition-all inset-0 absolute bg-gray-900 opacity-0"></div>
+    <div id="slideover" class="w-96 bg-white h-full absolute right-0 duration-300 ease-out transition-all translate-x-full">
+        <div class="absolute cursor-pointer text-gray-600 top-0 w-8 h-8 flex items-center justify-center right-0 mt-5 mr-5">
+        <button id="btnCerrar"> 
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        </div>
+        <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+            <div class="px-4 sm:px-6">
+                <h2 class="text-base font-semibold leading-6 text-gray-900 flex justify-center items-center" id="slide-over-title">Carrito</h2>
+            </div>
+            <div class="cart-items relative mt-6 flex-1 px-4 sm:px-6 ">
+                <!-- Your content -->
+            </div>
+        </div>
+    </div>
+        </div>
+    <li><a href="#">Cuenta</a></li>
+    <li><a href="#">Menú</a></li>
+</ul>
+</nav>
+
+
+</div>
+</header> 
+<main class="snap-y snap-mandatory h-screen w-screen relative overflow-auto overflow-x-hidden scroll-smooth">
+    <!-- HeroSection -->
+    <div class="snap-center">
+        <section class="landing-section h-screen w-screen bg-black text-center  overflow-hidden relative"
+data-header-color='white' id="herosection"
+>
+    <div class="z-30 relative h-full w-full flex flex-col">
+    <header>
+        <h2 class="text-white text-[40px] font-medium mt-[135.46px]">
+            Disfrute de Tesla
+        </h2>
+        <p class="text-white text-sm">Programe una prueba de conducción hoy mismo
+        </p>
+    </header>
+    
+    <footer class="flex flex-col flex-grow flex-nowrap justify-end pb-20">
+        <div>
+    <a class="border-[3px] border-white bg-white/5 backdrop-blur-sm rounded text-sm font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors " href="#">Prueba de conducción</a>
+    </div>
+    </footer>
+    </div>
+
+    <div class="absolute top-0 bottom-0 h-full w-full z-10 ">
+        <video class="object-center object-cover h-full w-full" autoplay muted loop src="../../public/video.webm"></video>
+    </div>
+    </section>
+    </div>
+    <!-- Model Y -->
+    <div class="snap-center">
+        <section class="landing-section h-screen w-screen bg-black text-center overflow-hidden relative" id="modely">
+            <div class="z-30 relative h-full w-full flex flex-col">
+                    <header>
+                        <h2 class="text-[#171A20]  text-[40px] font-medium mt-[135.46px] transition-colors duration-300">
+                            Model Y
+                        </h2>
+                        <p class="text-[#171A20]  text-sm underline ">Concertar una prueba de conducción
+                        </p>
+                    </header>
+                <footer class="flex flex-col flex-grow justify-end">
+                    <div class="gap-x-6 flex mx-auto pb-[16px] mb-[16px]">
+                        <a class="agregar-btn cursor-pointer border-[3px] bg-[#3C3D42] border-[#3C3D42] rounded text-sm font-medium text-white px-12 py-2 inline-block transition duration-500 ease-in-out" data-id="ModelY" data-nombre="Model Y" data-precio="$10.000">Agregar al Carrito</a>
+                        <a class="border-[3px] bg-[#E9E7E6] border-[#E9E7E6] rounded text-sm font-medium text-gray px-12 py-2 inline-block" href="#">Pedido Personalizado</a>    
+                    </div>
+                    <div class="pb-[16px]">
+                        <p class="text-[#171A20]  underline text-xs">Disponible con Moves III</p>
+                    </div>
+                </footer>      
+            
+            </div>
+            <div class="absolute top-0 bottom-0 h-full w-full z-10 ">
+                <img src="../../public/ModelY.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+            </div>
+                </section>
+    </div>
+    <!-- Model 3 -->
+    <div class="snap-center">
+        <section class="landing-section h-screen w-screen bg-black text-center overflow-hidden relative" id="model3">
+            <div class="z-30 relative h-full w-full flex flex-col">
+                    <header>
+                        <h2 class="text-[#171A20]  text-[40px] font-medium mt-[135.46px] transition-colors duration-300">
+                            Model 3
+                        </h2>
+                        <p class="text-[#171A20] text-sm underline  ">Concertar una prueba de conducción
+                        </p>
+                    </header>
+                <footer class="flex flex-col flex-grow justify-end">
+                    <div class="gap-x-6 flex mx-auto pb-[16px] mb-[16px]">
+                        <a class="agregar-btn cursor-pointer border-[3px] bg-[#3C3D42] border-[#3C3D42] rounded text-sm font-medium text-white px-12 py-2 inline-block transition duration-500 ease-in-out" data-id="Model3" data-nombre="Model 3" data-precio="$11.000"">Agregar al carrito</a>
+                        <a class="border-[3px] bg-[#E9E7E6] border-[#E9E7E6] rounded text-sm font-medium text-gray px-12 py-2 inline-block" href="#">Pedido Personalizado</a>    
+                    </div>
+                    <div class="pb-[16px]">
+                        <p class="text-[#171A20]  underline text-xs">Disponible con Moves III</p>
+                    </div>
+                </footer>      
+            
+            </div>
+            <div class="absolute top-0 bottom-0 h-full w-full z-10 ">
+                <img src="../../public/Model3.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+            </div>
+                </section>
+    </div>
+    <!-- Model S -->
+    <div class="snap-center">
+        <section class="landing-section h-screen w-screen bg-black text-center overflow-hidden relative"
+id="models">
+<div class="z-30 relative h-full w-full flex flex-col">
+        <header>
+            <h2 class="text-[#171A20]  text-[40px] font-medium mt-[135.46px] transition-colors duration-300">
+                Model S
+            </h2>
+            <p class="text-[#171A20] text-sm underline  ">Programe una consulta virtual
+            </p>
+        </header>
+    <footer class="flex flex-col flex-grow justify-end">
+        <div class="gap-x-6 flex mx-auto pb-[16px] mb-[32px]">
+            <a class="agregar-btn cursor-pointer border-[3px] bg-[#3C3D42] border-[#3C3D42] rounded text-sm font-medium text-white px-12 py-2 inline-block transition duration-500 ease-in-out" data-id="ModelS" data-nombre="Model S" data-precio="$12.000">Agregar al carrito</a>
+            <a class="border-[3px] bg-[#E9E7E6] border-[#E9E7E6] rounded text-sm font-medium text-gray px-24 py-2 inline-block" href="#">Saber más</a>    
+        </div>
+    </footer>      
+
+</div>
+<div class="absolute top-0 bottom-0 h-full w-full z-10 ">
+    <img src="../../public/ModelS.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+</div>
+    </section>
+    </div>
+    <!-- Model X -->
+    <div class="snap-center">
+        <section class="landing-section h-screen w-screen bg-black text-center overflow-hidden relative"
+    id="modelx">
+    <div class="z-30 relative h-full w-full flex flex-col">
+            <header>
+                <h2 class="text-[#171A20]  text-[40px] font-medium mt-[135.46px] transition-colors duration-300">
+                    Model X
+                </h2>
+                <p class="text-[#171A20] text-sm underline  ">Programe una consulta virtual
+                </p>
+            </header>
+        <footer class="flex flex-col flex-grow justify-end">
+            <div class="gap-x-6 flex mx-auto pb-[16px] mb-[32px]">
+                <a class="agregar-btn cursor-pointer border-[3px] bg-[#3C3D42] border-[#3C3D42] rounded text-sm font-medium text-white px-12 py-2 inline-block transition duration-500 ease-in-out" data-id="ModelX" data-nombre="Model X" data-precio="$15.000">Agregar al carrito</a>
+                <a class="border-[3px] bg-[#E9E7E6] border-[#E9E7E6] rounded text-sm font-medium text-gray px-24 py-2 inline-block" href="#">Saber más</a>    
+            </div>
+        </footer>      
+    
+    </div>
+    <div class="absolute top-0 bottom-0 h-full w-full z-10 ">
+        <img src="../../public/ModelX.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+    </div>
+        </section>
+    </div>
+    <!-- SolarPanels -->
+    <div class="snap-center">
+        <section class="landing-section h-screen w-screen bg-black text-center overflow-hidden relative" id="powerwall">
+            <div class="z-30 relative h-full w-full flex flex-col">
+                    <header>
+                        <h2 class="text-[#171A20]  text-[40px] font-medium mt-[135.46px] transition-colors duration-300">
+                            Solar y Powerwall
+                        </h2>
+                        <p class="text-[#171A20] text-sm  ">Energia para todos
+                        </p>
+                    </header>
+                <footer class="flex flex-col flex-grow justify-end">
+                    <div class="pb-[40px] mb-[16px]">
+                        <a class="border-[3px] bg-[#1F2229] border-[#1F2229] rounded text-sm font-medium text-white px-24 py-2 inline-block" href="#">Saber más</a>    
+                    </div>
+                </footer>      
+            
+            </div>
+            <div class="absolute top-0 bottom-0 h-full w-full z-10 ">
+                <img src="../../public/SolarPanels.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+            </div>
+                </section>
+    </div>
+    <!-- Accesorios -->
+    <div class="snap-center">
+        <section class="landing-section h-screen w-screen bg-black text-center overflow-hidden relative"
+id="carga">
+<div class="z-30 relative h-full w-full flex flex-col">
+        <header>
+            <h2 class="text-[#171A20]  text-[40px] font-medium mt-[135.46px] transition-colors duration-300">
+                Accesorios
+            </h2>
+        </header>
+    <footer class="flex flex-col flex-grow justify-end ">
+        <div class="pb-[40px] mb-[16px]">
+            <a class="border-[3px] bg-white border-white rounded text-sm font-medium text-gray-700 px-20 py-2 inline-block" href="#">Comprar ahora</a>    
+        </div>
+        <div class="gap-x-4 flex mx-auto pb-[16px] mb-[16px] text-gray-300 font-medium text-[12px]">
+            <a href="#">Tesla © 2023</a>
+            <a href="#" >Privacidad y legal</a>
+            <a href="#" >Contacto</a>
+            <a href="#">Noticias</a>
+            <a href="#">Seguir informado</a>
+            <a href="#">Localización de tiendas</a>
+        </div>
+    </footer>      
+
+</div>
+<div class="absolute top-0 bottom-0 h-full w-full z-10 ">
+    <img src="../../public/Accesorios.avif" alt="Model Y" class="h-full w-full object-cover object-center">
+</div>
+    </section>
+    </div>
+    </main>
+
+    <script src="../components/main.js"></script>
+</body>
+</html>

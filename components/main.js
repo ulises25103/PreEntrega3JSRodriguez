@@ -33,7 +33,7 @@ function crearElementoCarrito(elemento) {
     const item = document.createElement('div')
     item.innerHTML = `
         <div class="cart-item">
-            <img src="../../public/${id}.avif" data-id="${id}" alt="${nombre}">
+            <img src="./public/${id}.avif" data-id="${id}" alt="${nombre}">
             <div class="item-details mb-2 flex flex-col items-center justify-center">
                 <p class="item-name font-semibold text-gray-900">${nombre}</p>
                 <p class="item-price text-gray-900">${precio}</p>

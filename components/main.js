@@ -48,10 +48,7 @@ function crearElementoCarrito(elemento) {
 
     const deleteButton = item.querySelector('.btnEliminar')
     deleteButton.addEventListener('click', eliminarDelCarrito)
-
     configurarBotonesComprar()
-
-
     return item
 }
 
@@ -59,14 +56,10 @@ function crearElementoCarrito(elemento) {
 
 function agregarAlCarrito(elemento) {
     const cartItemsContainer = document.querySelector('.cart-items')
-
+    cartItemsContainer.innerHTML = '';
     const item = crearElementoCarrito(elemento)
-
-    // Agrega el elemento al contenedor del carrito
     cartItemsContainer.appendChild(item)
-
-    configurarBotonesComprar() // Configurar los botones de comprar después de agregar el elemento
-
+    configurarBotonesComprar() 
     actualizarAlmacenamientoLocal() 
 }
 
@@ -79,6 +72,22 @@ agregarCarritoButtons.forEach(button => {
 })
 
 
+function agregarAlCarritoPw(elemento) {
+    const cartItemsContainer = document.querySelector('.cart-items-pw')
+    const item = crearElementoCarrito(elemento)
+    cartItemsContainer.appendChild(item)
+    configurarBotonesComprar() 
+    actualizarAlmacenamientoLocal() 
+}
+
+const powerwallButton = document.querySelectorAll('.agregar-btn-powerwall')
+
+powerwallButton.forEach(button => {
+    button.addEventListener('click', () => {
+        agregarAlCarritoPw(button)
+    })
+})
+
 function actualizarAlmacenamientoLocal() {
     const cartItems = document.querySelectorAll('.cart-item')
     const cartData = []
@@ -89,7 +98,6 @@ function actualizarAlmacenamientoLocal() {
         const precio = item.querySelector('.item-price').textContent
         cartData.push({ id, nombre, precio })
     })
-
     localStorage.setItem('cart', JSON.stringify(cartData))  
 }
 
@@ -102,11 +110,14 @@ if (cartItem) {
     cartItem.remove()
     actualizarAlmacenamientoLocal()
 } 
+
 }
 const deleteButtons = document.querySelectorAll('.btnEliminar')
 deleteButtons.forEach(button => {
     button.addEventListener('click', eliminarDelCarrito)
 })
+
+
 
 function configurarBotonesComprar() {
     const buyButtons = document.querySelectorAll('.btnComprar')
@@ -125,7 +136,7 @@ function configurarBotonesComprar() {
 }
 
 
-// Llamar a la función para configurar los botones de comprar
+
 configurarBotonesComprar()
 
 
@@ -147,18 +158,14 @@ function cargarElementosDelAlmacenamientoLocal() {
 
 function agregarElementoDesdeAlmacenamiento(elemento) {
     const cartItemsContainer = document.querySelector('.cart-items')
-
     const item = crearElementoCarrito(elemento)
-
-    // Agrega el elemento al contenedor del carrito
     cartItemsContainer.appendChild(item)
-    
     actualizarAlmacenamientoLocal() 
 }
 
 
 
-const agregarAlCarritoBtn = document.querySelectorAll('.agregar-btn')
+const agregarAlCarritoBtn = document.querySelectorAll('.agregar-btn, .agregar-btn-powerwall')
 
 agregarAlCarritoBtn.forEach(btn => {
     btn.addEventListener('click', function() {
@@ -170,3 +177,5 @@ agregarAlCarritoBtn.forEach(btn => {
         }, 500)
     })
 })
+
+

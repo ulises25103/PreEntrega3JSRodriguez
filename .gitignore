@@ -8,3 +8,8 @@ npm-debug.log*
 # Ignorar archivos temporales
 *.tmp
 *.swp
+
+# Ignorar archivos generados por tailwind.css
+package-lock.json
+package.json
+tailwind.config.js
